@@ -1,4 +1,4 @@
-name: Pyhton workflow
+name: Python workflow
 
 on: [push]
 
