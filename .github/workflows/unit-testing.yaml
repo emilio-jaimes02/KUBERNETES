@@ -23,12 +23,12 @@ jobs:
         run: dotnet build './net/Exploring Actions/Exploring Actions.sln' --configuration Release --no-restore
 
       - name: Run unit tests with report
-        run: dotnet test ./netcore/ExploringSoft/TestExploringSoftApi/TestExploringSoftApi.csproj --configuration Release --no-build --logger "trx;LogFileName=TestResults.trx"
+        run: dotnet test './net/Exploring Actions/WeatherForecastControllerTest/WeatherForecastControllerTest.csproj' --configuration Release --no-build --logger "trx;LogFileName=TestResults.trx"
         
       - name: Upload test results
         uses: actions/upload-artifact@v4
         with:
           name: TestResults
-          path: ./netcore/ExploringSoft/TestExploringSoftApi/TestResults/TestResults.trx
+          path: './net/Exploring Actions/WeatherForecastControllerTest/TestResults/TestResults.trx'
 
 
