@@ -22,8 +22,8 @@ jobs:
           dotnet-version: '8.x'
 
       - name: Restore dependencies
-        run: dotnet restore ./netcore/ExploringSoft/ExploringSoft.sln
-
+        run: dotnet restore './net/Exploring Actions/Exploring Actions.sln'
+ 
       - name: Build the solution
         run: dotnet build ./netcore/ExploringSoft/ExploringSoft.sln --configuration Release --no-restore
 
