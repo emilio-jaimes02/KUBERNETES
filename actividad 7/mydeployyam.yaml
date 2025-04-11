@@ -3,22 +3,22 @@ kind: Deployment
 metadata:
   creationTimestamp: null
   labels:
-    app: mydeployment
-  name: mydeployment
+    app: mydep
+  name: mydep
 spec:
-  replicas: 1
+  replicas: 5
   selector:
     matchLabels:
-      app: mydeployment
+      app: mydep
   strategy: {}
   template:
     metadata:
       creationTimestamp: null
       labels:
-        app: mydeployment
+        app: mydep
     spec:
       containers:
-      - image: nginx
+      - image: nginx:1.27.4-bookworm-perl
         name: nginx
         resources: {}
 status: {}

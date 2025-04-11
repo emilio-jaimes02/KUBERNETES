@@ -3,13 +3,13 @@ kind: Pod
 metadata:
   creationTimestamp: null
   labels:
-    run: rabbitmq
+    run: podyam
     enviroment: emilio 
-  name: rabbitmq
+  name: podyam
 spec:
   containers:
-  - image: rabbitmq
-    name: rabbitmq
+  - image: emilio
+    name: podyam
     volumeMounts:
       - mountPath: "/scratch"
         name: my-volume
